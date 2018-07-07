@@ -9,13 +9,14 @@ body{
 
 nav {
 	text-align: left;
-	color: pink;
+	color: 	pink;
 	display: inline;
 
 }
 nav > h1 {
 	font-family: 'Concert One', cursive;
 	font-size: 	2.0em;
+	color: 	#000080;
 }
 #info{
 	background-color: white;
