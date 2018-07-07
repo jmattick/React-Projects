@@ -90,7 +90,7 @@ class App extends React.Component {
   	document.getElementById('info').classList.add('hidden');
   }
 
-  }
+  
   
 
   render(){
