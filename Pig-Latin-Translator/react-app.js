@@ -55,7 +55,6 @@ class App extends React.Component {
     this.handleChange = this.handleChange.bind(this);
  	this.removeHidden = this.removeHidden.bind(this);
  	this.addHidden = this.addHidden.bind(this);
- 	this.toggleHidden = this.toggleHidden.bind(this);
  	
   }
  
@@ -90,12 +89,6 @@ class App extends React.Component {
   addHidden(){
   	document.getElementById('info').classList.add('hidden');
   }
-  toggleHidden(){
-  	if(document.classList.contains('hidden')){
-  		document.getElementById('info').classList.remove('hidden');
-  	} else {
-  		document.getElementById('info').classList.add('hidden');
-  	}
 
   }
   
@@ -105,8 +98,7 @@ class App extends React.Component {
 	    <div id = "main">
 	    	<Nav 
 	    		removeHidden = {this.removeHidden}
-	    		addHidden = {this.addHidden}
-	    		toggleHidden = {this.toggleHidden}/>
+	    		addHidden = {this.addHidden}/>
 	    	<Form 
 	    		input = {this.state.input} 
 	    		handleChange = {this.handleChange} 
@@ -148,7 +140,7 @@ class Nav extends React.Component {
 		return(
 			<nav id = "nav">
 
-					<h1>React Pig Latin Translator <i onClick = {this.props.toggleHidden} class="fa fa-info-circle hidden"></i></h1>
+					<h1>React Pig Latin Translator <i onClick = {this.props.removeHidden} class="fa fa-info-circle hidden"></i></h1>
 					<div id = "info-container">
 					<div id = "info" class = "hidden"><i onClick = {this.props.addHidden} class="fa fa-3x fa-times-circle"></i><h1>Pig Latin takes the first consonant (or consonant cluster) of an English word, moves it to the end of the word and suffixes an "ay". If a word begins with a vowel you just add "way" to the end.</h1></div>
 					
